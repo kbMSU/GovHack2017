@@ -18,26 +18,16 @@
         $("#default").show();
         $("#employment").hide();
         $("#net-job-change").hide();
-        $("#gender-disparities").hide();
       });
 
       function employmentClick() {
         $("#employment").show();
         $("#net-job-change").hide();
-        $("#gender-disparities").hide();
         $("#default").hide();
       }
 
       function netJobChangeClick() {
         $("#net-job-change").show();
-        $("#employment").hide();
-        $("#gender-disparities").hide();
-        $("#default").hide();
-      }
-
-      function genderDisparitiesClick() {
-        $("#gender-disparities").show();
-        $("#net-job-change").hide();
         $("#employment").hide();
         $("#default").hide();
       }
@@ -99,7 +89,6 @@
           <ul id='dropdown2' class='dropdown-content'>
             <li><div onclick="employmentClick()">Employment by Industry</div></li>
             <li><div onclick="netJobChangeClick()">Impact of Computerization</div></li>
-            <li><div onclick="genderDisparitiesClick()">Gender Disparities Analysis</div></li>
           </ul>
         </div>
         <div class="row">
@@ -107,7 +96,26 @@
             Pick a section in the analysis dropdown to view data
           </div>
           <div id="employment">
-            Employment by Industry
+            <div class="container">
+              <div class="row" style="font-size:18px" align="center">
+                Employment by Industry
+              </div>
+              <div class="row">
+                The current employment numbers across all industries is as follows.
+              </div>
+              <div class="row">
+                <img class="responsive-img" src="http://i.imgur.com/EcQdhjb.png">
+              </div>
+              <div class="row">
+                <img class="responsive-img" src="http://i.imgur.com/FX6YWxy.png">
+              </div>
+              <div class="row">
+                Men seem to be disproportionately represented among Trade Workers, Machinery Operators and Labourers. While there was a significantly higher percentage of women among Community Workers, Administrative Workers.
+              </div>
+              <div class="row">
+                <img class="responsive-img" src="http://i.imgur.com/VkHGKVv.png">
+              </div>
+            </div>
           </div>
           <div id="net-job-change">
             <div class="container">
@@ -125,9 +133,6 @@
               </div>
             </div>
           </div>
-          <div id="gender-disparities">
-            Gender Disparities
-          </div>
         </div>
       </div>
 
@@ -142,7 +147,7 @@
               </p>
             </div>
             <div class="card-action">
-              <a href="https://drive.google.com/open?id=0By6rpPQVypbOWU13ZU05d0QySE0">Download</a>
+              <a href="https://drive.google.com/open?id=0By6rpPQVypbOQk9YX0pJajdmSHM">Download</a>
             </div>
           </div>
         </div>
