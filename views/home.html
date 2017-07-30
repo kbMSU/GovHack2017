@@ -9,13 +9,38 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
 
-  <body>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#gender-ratio").show();
+        $("#net-job-change").hide();
+        $("#gender-disparities").hide();
+      });
 
+      function genderRatioClick() {
+        $("#gender-ratio").show();
+        $("#net-job-change").hide();
+        $("#gender-disparities").hide();
+      }
+
+      function netJobChangeClick() {
+        $("#net-job-change").show();
+        $("#gender-ratio").hide();
+        $("#gender-disparities").hide();
+      }
+
+      function genderDisparitiesClick() {
+        $("#gender-disparities").show();
+        $("#net-job-change").hide();
+        $("#gender-ratio").hide();
+      }
+    </script>
+  </head>
+
+  <body>
     <ul id="dropdown1" class="dropdown-content">
       <li><a href="#home"><i class="material-icons">home</i>Home</a></li>
       <li><a href="#analysis"><i class="material-icons">trending_up</i>Analysis</a></li>
@@ -25,7 +50,7 @@
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
-          <span class="brand-logo">RoboThreat</span>
+          <span class="left brand-logo">RoboThreat</span>
           <ul class="right">
             <li>
               <a class="dropdown-button" href="#!" data-beloworigin="true" data-activates="dropdown1">
@@ -42,27 +67,43 @@
     <div class="container">
 
       <div id="home" class="col s10" align="center" style="padding-top:10px">
-        <span style="font-size:24px">
-          Welcome to RoboThreat
-        </span>
-        <br />
-        <img class="responsive-img" src="http://therapytoronto.ca/images/blogpics/GenderInequality.jpg">
-        <br />
-        <span style="font-size:16px">
-          This is an interactive web application to provide insight into the threat of job
-          displacement women face from automation.
-        </span>
+        <div class="row">
+          <span style="font-size:24px">
+            Welcome to RoboThreat
+          </span>
+        </div>
+        <div class="row">
+          <img class="responsive-img" src="http://therapytoronto.ca/images/blogpics/GenderInequality.jpg">
+        </div>
+        <div class="row">
+          <span style="font-size:16px">
+            This is an interactive web application to provide insight into the threat of job
+            displacement women face from automation.
+          </span>
+        </div>
       </div>
 
       <div id="analysis">
         <hr />
-        <a class='dropdown-button btn' href='#' data-beloworigin="true" data-activates='dropdown2'>Analysis Menu</a>
-        <ul id='dropdown2' class='dropdown-content'>
-          <li><a href="#!">Gender Ratio by Industry</a></li>
-          <li><a href="#!">Job Displacement through Automation</a></li>
-          <li><a href="#!">Gender Disparities in Job Displacement</a></li>
-        </ul>
-
+        <div class="row">
+          <a class='dropdown-button btn' href='#' data-beloworigin="true" data-activates='dropdown2'>Analysis Menu</a>
+          <ul id='dropdown2' class='dropdown-content'>
+            <li><div onclick="genderRatioClick()">Gender Ratio by Industry</div></li>
+            <li><div onclick="netJobChangeClick()">Net Change in Jobs due to Computerization</div></li>
+            <li><div onclick="genderDisparitiesClick()">Gender Disparities Analysis</div></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div id="gender-ratio">
+            Gender Ratio
+          </div>
+          <div id="net-job-change">
+            Net Job Change
+          </div>
+          <div id="gender-disparities">
+            Gender Disparities
+          </div>
+        </div>
       </div>
 
       <div id="report" class="row">
@@ -84,10 +125,29 @@
 
       <div id="about">
         <hr />
-
+        <div class="container">
+          <div class="row">
+            <div class="col s4">
+              <img class="responsive-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/GovHack_logo.svg/1200px-GovHack_logo.svg.png" />
+            </div>
+            <div class="col s8">
+              This website was created for GovHack2017
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
+
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+          Copyright (c) 2017
+          <br />
+          Karthik Balasubramanian, All Rights Reserved
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
