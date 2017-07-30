@@ -15,7 +15,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $("#gender-ratio").show();
+        $("#default").show();
+        $("#gender-ratio").hide();
         $("#net-job-change").hide();
         $("#gender-disparities").hide();
       });
@@ -24,18 +25,21 @@
         $("#gender-ratio").show();
         $("#net-job-change").hide();
         $("#gender-disparities").hide();
+        $("#default").hide();
       }
 
       function netJobChangeClick() {
         $("#net-job-change").show();
         $("#gender-ratio").hide();
         $("#gender-disparities").hide();
+        $("#default").hide();
       }
 
       function genderDisparitiesClick() {
         $("#gender-disparities").show();
         $("#net-job-change").hide();
         $("#gender-ratio").hide();
+        $("#default").hide();
       }
     </script>
   </head>
@@ -81,6 +85,11 @@
             displacement women face from automation.
           </span>
         </div>
+        <div class="row">
+          <div class="video-container">
+            <iframe src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
 
       <div id="analysis">
@@ -94,6 +103,9 @@
           </ul>
         </div>
         <div class="row">
+          <div id="default">
+            Pick a section in the analysis dropdown to view data
+          </div>
           <div id="gender-ratio">
             Gender Ratio
           </div>
@@ -131,7 +143,9 @@
               <img class="responsive-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/GovHack_logo.svg/1200px-GovHack_logo.svg.png" />
             </div>
             <div class="col s8">
-              This website was created for GovHack2017
+              <div class="valign-wrapper">
+                This website was created for GovHack2017. It is a mobile optimized website intented to serve as a prototype/MVP.
+              </div>
             </div>
           </div>
         </div>
