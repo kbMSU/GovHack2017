@@ -16,13 +16,13 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $("#default").show();
-        $("#gender-ratio").hide();
+        $("#employment").hide();
         $("#net-job-change").hide();
         $("#gender-disparities").hide();
       });
 
-      function genderRatioClick() {
-        $("#gender-ratio").show();
+      function employmentClick() {
+        $("#employment").show();
         $("#net-job-change").hide();
         $("#gender-disparities").hide();
         $("#default").hide();
@@ -30,7 +30,7 @@
 
       function netJobChangeClick() {
         $("#net-job-change").show();
-        $("#gender-ratio").hide();
+        $("#employment").hide();
         $("#gender-disparities").hide();
         $("#default").hide();
       }
@@ -38,7 +38,7 @@
       function genderDisparitiesClick() {
         $("#gender-disparities").show();
         $("#net-job-change").hide();
-        $("#gender-ratio").hide();
+        $("#employment").hide();
         $("#default").hide();
       }
     </script>
@@ -77,12 +77,12 @@
           </span>
         </div>
         <div class="row">
-          <img class="responsive-img" src="http://therapytoronto.ca/images/blogpics/GenderInequality.jpg">
+          <img class="responsive-img" src="http://i.imgur.com/cQMvDVb.png">
         </div>
         <div class="row">
           <span style="font-size:16px">
             This is an interactive web application to provide insight into the threat of job
-            displacement women face from automation.
+            displacement people face from automation.
           </span>
         </div>
         <div class="row">
@@ -97,8 +97,8 @@
         <div class="row">
           <a class='dropdown-button btn' href='#' data-beloworigin="true" data-activates='dropdown2'>Analysis Menu</a>
           <ul id='dropdown2' class='dropdown-content'>
-            <li><div onclick="genderRatioClick()">Gender Ratio by Industry</div></li>
-            <li><div onclick="netJobChangeClick()">Net Change in Jobs due to Computerization</div></li>
+            <li><div onclick="employmentClick()">Employment by Industry</div></li>
+            <li><div onclick="netJobChangeClick()">Impact of Computerization</div></li>
             <li><div onclick="genderDisparitiesClick()">Gender Disparities Analysis</div></li>
           </ul>
         </div>
@@ -106,11 +106,24 @@
           <div id="default">
             Pick a section in the analysis dropdown to view data
           </div>
-          <div id="gender-ratio">
-            Gender Ratio
+          <div id="employment">
+            Employment by Industry
           </div>
           <div id="net-job-change">
-            Net Job Change
+            <div class="container">
+              <div class="row" style="font-size:18px" align="center">
+                Impact of Computerization
+              </div>
+              <div class="row">
+                There will be large job losses across most industries. Some industries will face less job loss due to creation of new Tech related jobs as a result of automation.
+              </div>
+              <div class="row">
+                <img class="responsive-img" src="http://i.imgur.com/zIDbBjL.png">
+              </div>
+              <div class="row">
+                <img class="responsive-img" src="http://i.imgur.com/it42z6j.png">
+              </div>
+            </div>
           </div>
           <div id="gender-disparities">
             Gender Disparities
@@ -125,11 +138,11 @@
             <div class="card-content white-text">
               <span class="card-title">Report</span>
               <p>
-                You can download a detailed analytical report presenting the same information as this website in a professional format
+                You can download a detailed analytical report presenting the same information as this website
               </p>
             </div>
             <div class="card-action">
-              <a href="https://drive.google.com/open?id=1ka4PcnU6JSX9fjnyhGDXhziSyKH031aguL5-W7HWzrA" download>Download</a>
+              <a href="https://drive.google.com/open?id=0By6rpPQVypbOWU13ZU05d0QySE0">Download</a>
             </div>
           </div>
         </div>
